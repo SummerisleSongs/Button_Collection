@@ -1,0 +1,82 @@
+:root {
+  --rainbow1: yellow;
+  --rainbow2: lightskyblue;
+  --rainbow3: violet;
+  --rainbow4: lightpink;
+  --rainbow5: wheat;
+  --rainbow6: lightgreen;
+  --rainbow-bg1: darkcyan;
+  --rainbow-bg2: darkblue;
+  --rainbow-bg3: darkmagenta;
+  --rainbow-bg4: darkred;
+  --rainbow-bg5: olive;
+  --rainbow-bg6: darkgreen;
+}
+
+button.rainbow {
+  font-size: 1rem;
+  font-weight: 700;
+  border: 0.2em solid;
+  border-radius: 1.5em;
+  padding: 0.75em;
+  margin: 0.5em;
+  width: auto;
+  height: auto;
+}
+
+/* Rainbow */
+.rainbow {
+  background: linear-gradient(
+    to right,
+    var(--rainbow-bg1),
+    var(--rainbow-bg2),
+    var(--rainbow-bg3),
+    var(--rainbow-bg4),
+    var(--rainbow-bg5),
+    var(--rainbow-bg6),
+    var(--rainbow-bg1),
+    var(--rainbow-bg2)
+  );
+  background-size: 700% 100%;
+  animation: gradient 5s linear infinite, color 5s infinite linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes color {
+  0% {
+    color: var(--rainbow5);
+    border-color: var(--rainbow5);
+  }
+  16% {
+    color: var(--rainbow6);
+    border-color: var(--rainbow6);
+  }
+  33% {
+    color: var(--rainbow1);
+    border-color: var(--rainbow1);
+  }
+  50% {
+    color: var(--rainbow2);
+    border-color: var(--rainbow2);
+  }
+  66% {
+    color: var(--rainbow3);
+    border-color: var(--rainbow3);
+  }
+  83% {
+    color: var(--rainbow4);
+    border-color: var(--rainbow4);
+  }
+  100% {
+    color: var(--rainbow5);
+    border-color: var(--rainbow5);
+  }
+}
