@@ -6,17 +6,39 @@
 body {
   background-color: hsl(217, 28%, 15%);
   /*Changes to flex so we can fit many div side-by-side*/
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
-.container-of-buttons {
+
+/*Changes made by Monica Cardoso*/
+header {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  color: white;
+}
+
+.buttons-container {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+}
+
+.button {
+  padding: 20px;
+}
+
+/* .container-of-buttons {
   height: 600px;
   width: 500px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
+} */
 button {
   outline: none;
   width: 6rem;
